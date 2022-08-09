@@ -38,16 +38,20 @@ class BrightnessGrid(Grid):
     """
     An extension of Grid that is better suited for drawing with greyscale levels
     """
-    def __init__(self, w: int, h: int, fill: str = '.', palette: list = ['.', 'o', 'O', '0']) -> None:
-        self.set_palette(palette)
+    def __init__(self, w: int, h: int, fill: str = '.', pal: str=".oO0") -> None:
+        self.set_palette(pal)
         super().__init__(w, h, fill)
 
 
-    def set_palette(self, palette: list):
+    def set_palette(self, pal: str):
         """
         Sets the palette that the grid will use to draw points.
-        Takes a list of characters, where the lowest index corresponds to the lowest brightness values and the highest index corresponds to the highest brightness value
+        Takes a string of characters, where the lowest index corresponds to the lowest brightness values and the highest index corresponds to the highest brightness value
         """
+        palette = []
+        for c in pal:
+            palette.append(c)
+
         self.palette = palette
 
 
