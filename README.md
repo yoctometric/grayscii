@@ -8,7 +8,11 @@ It also requires the pillow image library, which can be installed using:
 
 ## Usage
 To convert and print an image in ascii, run:  
-```python grayscii.py <image_path>```  
+```python grayscii.py earring.jpg```  
+The output can be resized using -x and -y:  
+```python grayscii.py earring.jpg -x 75 -y 50```  
+Custom ascii palettes can be specified with -p:  
+```python grayscii.py earring.jpg -x 75 -y 50 -p _-+=#@``` 
 run ```python grayscii.py -h``` for more detailed usage information.  
 
 
