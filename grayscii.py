@@ -1,3 +1,6 @@
+# Grayscii by Will Cunningham
+# A tool to convert images into ascii text using custom ascii palettes
+
 from grid import BrightnessGrid
 import argparse
 from pathlib import Path
@@ -28,6 +31,7 @@ def convert_image(image: Image, size: tuple, palette: str) -> BrightnessGrid:
 
 
 if __name__ == "__main__":
+    # set up command line argument parsing
     parser = argparse.ArgumentParser()
 
     parser.add_argument("image", type=Path, 
