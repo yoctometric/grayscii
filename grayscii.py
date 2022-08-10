@@ -12,6 +12,10 @@ def convert_image(image: Image, size: tuple, palette: str) -> BrightnessGrid:
     Converts an image into a BrightnessGrid object and returns that
     """
 
+    # ensure the palette was valid
+    if len(palette) <= 0:
+        raise ValueError(f"{palette=}. The palette must be at least one character")
+
     # get the image in grayscale
     im = image.convert(mode="L")
 
@@ -68,9 +72,6 @@ if __name__ == "__main__":
     if args.width is not None or args.height is not None:
         assert args.width is not None and args.height is not None, f"When specifying the size of the output, both -x and -y must be specified."
         size = (args.width, args.height)
-
-    # ensure the palette was valid
-    assert len(args.palette) > 0, f"The palette must be at least one character"
 
     # convert the image
     im = Image.open(filepath.as_posix())

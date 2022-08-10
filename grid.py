@@ -1,3 +1,5 @@
+# A little library containing classes to make 2d arrays of characters more convenient
+
 import random
 
 class Grid:
