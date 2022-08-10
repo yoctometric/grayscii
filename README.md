@@ -1,4 +1,4 @@
-![An image of text of an image of text. It reads 'Grayscii'](title.png)  
+![An image of text of an image of text. It reads 'Grayscii'](resources/title.png)  
 Grayscii is a small command line program that converts images to ascii art using user defined character palettes.  
 
 ## Dependencies  
@@ -8,11 +8,11 @@ It also requires the pillow image library, which can be installed using:
 
 ## Usage
 To convert and print an image in ascii, run:  
-```python grayscii.py earring.jpg```  
+```python grayscii.py resources/earring.jpg```  
 When printing directly to a terminal, most images will be too large to view properly. Fortunately, the output can be resized using -x and -y:  
-```python grayscii.py earring.jpg -x 75 -y 50```  
+```python grayscii.py resources/earring.jpg -x 75 -y 50```  
 Custom ascii palettes can be specified with -p:  
-```python grayscii.py earring.jpg -x 75 -y 50 -p _-+=#@```  
+```python grayscii.py resources/earring.jpg -x 75 -y 50 -p _-+=#@```  
 run ```python grayscii.py -h``` for more detailed usage information.  
 
 
