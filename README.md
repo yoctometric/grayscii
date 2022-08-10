@@ -17,6 +17,8 @@ And the output can be written to a file using -o:
 ```python grayscii.py resources/earring.jpg -o earring.txt```  
 run ```python grayscii.py -h``` for more detailed usage information.  
 
+## Tests  
+To run the unit tests for this program, navigate to tests/ and run ```py tests.py```  
 
 ## Credits  
 earring.jpg was sourced from [wikipedia](https://simple.wikipedia.org/wiki/Girl_with_a_Pearl_Earring#/media/File:1665_Girl_with_a_Pearl_Earring.jpg)
