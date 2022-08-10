@@ -30,6 +30,14 @@ def convert_image(image: Image, size: tuple, palette: str) -> BrightnessGrid:
     return grid
 
 
+def write_to_file(grid: BrightnessGrid, file_path: Path) -> None:
+    """
+    Writes a brightness grid to the file at <file_path>
+    """
+    with open(file_path, 'w') as f:
+        f.write(str(grid))
+
+
 if __name__ == "__main__":
     # set up command line argument parsing
     parser = argparse.ArgumentParser()
@@ -67,4 +75,11 @@ if __name__ == "__main__":
     # convert the image
     im = Image.open(filepath.as_posix())
     grid = convert_image(im, size, args.palette)
-    print(grid)
+
+    # output the grid
+    if args.output is not None:
+        write_to_file(grid, args.output)
+        print(f"Wrote image as ascii art to file {args.output.as_posix()}")
+    else:
+        # if no output path was given, just print it
+        print(grid)

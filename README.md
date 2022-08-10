@@ -13,6 +13,8 @@ When printing directly to a terminal, most images will be too large to view prop
 ```python grayscii.py resources/earring.jpg -x 75 -y 50```  
 Custom ascii palettes can be specified with -p:  
 ```python grayscii.py resources/earring.jpg -x 75 -y 50 -p _-+=#@```  
+And the output can be written to a file using -o:  
+```python grayscii.py resources/earring.jpg -o earring.txt```  
 run ```python grayscii.py -h``` for more detailed usage information.  
 
 
